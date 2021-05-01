@@ -2,7 +2,7 @@ package ch7;
 
 public class FighterTest {
     public static void main(String[] args) {
-        Fighter f = new Fighter(100, "Fighter");
+        Fighter f = new Fighter(100);
         StartCraft s = new StartCraft();
 
         f.move(1, 5);
@@ -24,8 +24,8 @@ public class FighterTest {
 }
 
 class Fighter extends Unit implements Fightable{ // Unit 클래스로부터 상속, Fightable 인터페이스만을 구현
-    Fighter(int hp, String name) {
-        super(hp, name);
+    Fighter(int hp) {
+        super(hp);
     }
     public void move(int x, int y){     // 제어자를 public으로 했다.
                                         // 오버라이딩을 할 때는 조상의 메서드보다 넓은 범위의 접근 제어자를 지정해야 한다.

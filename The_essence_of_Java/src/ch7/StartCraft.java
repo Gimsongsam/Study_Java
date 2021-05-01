@@ -2,20 +2,19 @@ package ch7;
 
 interface Repairable{}
 
-abstract class Unit{
+class Unit{
     int x, y;
-    abstract void move (int x, int y);
+//    abstract void move (int x, int y);
     void stop() { /* 현재 위치에 정지 */}
 
     int hitPoint;
-    final String name;
+//    final String name;
     final int MAX_HP;
-    Unit(int hp, String name){
+    Unit(int hp){
         this.MAX_HP = hp;
-        this.name = name;
+//        this.name = name;
     }
 }
-
 
 public class StartCraft {
 
