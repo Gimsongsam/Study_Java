@@ -461,3 +461,74 @@ Binding(COMMAND+W,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2021-12-20 09:45:21.867 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/gimseonghye/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/gimseonghye/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2021-12-20 09:45:36.512
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-20 09:45:36.512
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19739906,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@65503a26,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-20 09:45:36.512
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13aa54f1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26d7cb0d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.egit.core 4 0 2021-12-20 09:45:43.886
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '.git', absolute path: '/Users/gimseonghye/Desktop/study_code/JAVA/egoing/java_tutorials/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:751)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:714)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:678)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:661)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:217)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296)
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:708)
+	at org.eclipse.egit.core.internal.info.GitItemStateFactory.getIndexDiffDataOrNull(GitItemStateFactory.java:106)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:194)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:172)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:250)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:412)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:388)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
