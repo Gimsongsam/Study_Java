@@ -21,3 +21,4 @@ java.io.FileNotFoundException: /Users/gimseonghye/Desktop/study_code/JAVA/생활
 2021-12-17 12:13:36,405 [Git Repository Closer] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[/Users/gimseonghye/git/repository/.git]
 2021-12-17 14:01:22,645 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-12-20 09:45:41,848 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-01-01 23:10:47,957 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
