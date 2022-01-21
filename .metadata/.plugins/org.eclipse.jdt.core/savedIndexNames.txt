@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Users/gimseonghye/Desktop/study_code/JAVA/.metadata/.plugins/org.eclipse.jdt.core
-736068086.index
-1865797976.index

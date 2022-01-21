@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/Users/gimseonghye/Desktop/study_code/JAVA/egoing/.metadata/.plugins/org.eclipse.jdt.core
-2956259874.index
-1865797976.index
-3246525142.index
