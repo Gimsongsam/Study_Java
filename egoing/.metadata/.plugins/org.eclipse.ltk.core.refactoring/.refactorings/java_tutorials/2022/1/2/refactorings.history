@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;org.opentutorials.javatutorials.condition.Conditions2Demo.java&apos; to &apos;Condition2Demo.java&apos;&#x0A;- Original project: &apos;java_tutorials&apos;&#x0A;- Original element: &apos;org.opentutorials.javatutorials.condition.Conditions2Demo.java&apos;&#x0A;- Renamed element: &apos;org.opentutorials.javatutorials.condition.Condition2Demo.java&apos;" description="Rename compilation unit &apos;Conditions2Demo.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;org.opentutorials.javatutorials.condition{Conditions2Demo.java" name="Condition2Demo.java" references="false" stamp="1641264422395" version="1.0"/>
+</session>
