@@ -20,7 +20,7 @@ class Tv {
     } // TV의 채널을 낮추는 기능을 하는 메서드
 }
 
-public class TvTest {
+class TvTest{
     public static void main(String args[]) {
         Tv t;               // Tv인스턴스를 참조하기 위한 변수 t를 선언
         t = new Tv();       // Tv인스턴스를 생성한다.
