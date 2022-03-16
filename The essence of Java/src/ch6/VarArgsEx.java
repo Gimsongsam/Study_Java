@@ -19,8 +19,11 @@ public class VarArgsEx {
 
         return result;
     }
+
+    // 두 오버로딩된 메서드가 구분되지 않는다.
+    // 가변인자를 사용한 메서드는 오버로딩하지 않는 것이 좋다.
     /*
-        satic String concatenate(String... args){
+        static String concatenate(String... args){
             return concatenate("", args);
         }
     */
