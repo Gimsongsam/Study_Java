@@ -5,12 +5,22 @@ class Car{
     String gearType;    // 변속기 종류 - auto(자동), manual(수동)
     int door;           // 문의 개수
 
+    // Car() { }
+
+    // Car(String c, String g, int d){
+    //      color = c;
+    //      gearType = g;
+    //      door = d;
+    //  }
+
     Car(){
-        this("white", "auto", 4);
-    }
+        this("white", "auto", 4);   // Car(String color, String gearType, int door) 호출
+    }                                                   // 또 다른 생성자
 
     Car(String color){
-        this(color, "auto", 4);
+        this(color, "auto", 4);     // Car(String color, String gearType, int door) 호출
+                                                    // 또 다른 생성자
+//        this.color = color;
     }
 
     Car(String color, String gearType, int door){
