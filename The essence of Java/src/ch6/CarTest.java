@@ -19,6 +19,12 @@ class Car{
         this("white", "auto", 4, 4);   // Car(String color, String gearType, int door) 호출
     }                                                   // 또 다른 생성자
 
+    Car(Car c){     // 인스턴스의 복사를 위한 생성자.
+        color       = c.color;
+        gearType    = c.gearType;
+        door        = c.door;
+    }
+
     Car(String color){
         this(color, "auto", 4, 4);     // Car(String color, String gearType, int door) 호출
                                                     // 또 다른 생성자
@@ -29,7 +35,7 @@ class Car{
         this.color = color;
         this.gearType = gearType;
         this.door = door;
-        this.tire = tire;
+        this.tire = tire;   // static 메서드는 this를 사용할 수 없다.
     }
 
 }
