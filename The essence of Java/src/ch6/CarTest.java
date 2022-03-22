@@ -7,7 +7,7 @@ class Car{
 
     static int tire = 4;
 
-    // Car() { }
+//     Car() { }
 
     // Car(String c, String g, int d){
     //      color = c;
@@ -19,10 +19,15 @@ class Car{
         this("white", "auto", 4, 4);   // Car(String color, String gearType, int door) 호출
     }                                                   // 또 다른 생성자
 
-    Car(Car c){     // 인스턴스의 복사를 위한 생성자.
-        color       = c.color;
-        gearType    = c.gearType;
-        door        = c.door;
+    // 인스턴스의 복사를 위한 생성자.
+//    Car(Car c){
+//        color       = c.color;
+//        gearType    = c.gearType;
+//        door        = c.door;
+//    }
+    Car(Car c){
+        // Car(String color, String gearType, int door, int tire)
+        this(c.color, c.gearType, c.door, c.tire);
     }
 
     Car(String color){
