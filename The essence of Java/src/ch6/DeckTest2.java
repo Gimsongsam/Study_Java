@@ -10,6 +10,10 @@ public class DeckTest2 {
         d.shuffle();                // 카드를 섞는다.
         c = d.pick(0);          // 섞은 후에 제일 위의 카드를 뽑는다.
         System.out.println(c);
+
+        Card c2 = d.pick();
+        System.out.println(c2);
+
     }
 }
 
