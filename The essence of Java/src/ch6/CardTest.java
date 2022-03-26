@@ -35,6 +35,9 @@ class Card {
     static int height = 250;
     String str_kind;
 
+    // ------------------------------------------- //
+
+
     static final int KIND_MAX = 4;  // 카드 무늬의 수
     static final int NUM_MAX = 13;  // 무늬별 카드 수
 
@@ -54,7 +57,7 @@ class Card {
         this.number = number;
     }
 
-    public String toString(){
+    public String toString(){   // toString 메서드가 없다면 Card 클래스를 출력했을 때 인스턴스 변수들의 주소가 출력이 된다.
         String[] kinds = {"", "CLOVER", "HEART", "DIAMOND", "SPADE"};
         String numbers = "0123456789XJQK";    // 숫자 10은 x로 표현
 
