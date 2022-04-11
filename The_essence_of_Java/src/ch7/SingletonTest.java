@@ -9,6 +9,7 @@ final class Singleton{
 
     public static Singleton getInstance(){ // 인스턴스를 생성해서 반환해주는 public메서드를 제공함으로써
                                             // 외부에서 이 클래스의 인스턴스를 사용하도록 할 수 있다.
+                                            // (인스턴스 메서드는 static 클래스에서 사용하지 못한다.)
         if(s==null)
             s = new Singleton();
         return s;
