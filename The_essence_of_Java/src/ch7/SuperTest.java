@@ -9,11 +9,19 @@ public class SuperTest {
 
 class Parent{
     int x = 10;
+
+    void methodTest(){
+        System.out.println("Parent Method");
+    }
 }
 
 class Child extends Parent{
 
     int x = 20;
+
+    void methodTest(){
+        System.out.println("Child Method");
+    }
 
     void method(){
         System.out.println("x=" + x);               // 자손
