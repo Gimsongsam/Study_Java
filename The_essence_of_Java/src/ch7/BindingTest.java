@@ -6,10 +6,12 @@ public class BindingTest {
         Child c = new Child();
 
         System.out.println("p.x = " + p.x);
-        p.methodTest();
+        p.method();
+
+        System.out.println();
 
         System.out.println("p.c = " + c.x);
-        c.methodTest();
+        c.method();
     }
 }
 
