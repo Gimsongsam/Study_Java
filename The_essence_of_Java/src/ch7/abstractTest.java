@@ -1,6 +1,19 @@
 package ch7;
 
 public class abstractTest {
+    public static void main(String[] args) {
+        Player p = new Player() {
+            @Override
+            void play(int pos) {
+
+            }
+
+            @Override
+            void stop() {
+
+            }
+        };
+    }
 
 }
 
@@ -33,11 +46,13 @@ abstract class Player{
 
     class CDPlayer extends Player{
         void play(int currentPos){
-            /* 조상의 추상메서드를 구현. 내용 생략 */
+            /* 조상의 추상메서드를 구현. 상세 내용 생략 */
+            System.out.println("play");
         }
 
         void stop(){
-            /* 조상의 추상메서드를 구현. 내용 생략 */
+            /* 조상의 추상메서드를 구현. 상세 내용 생략 */
+            System.out.println("stop");
         }
 
         // CDPlayer클래스에 추가로 정의된 멤버
