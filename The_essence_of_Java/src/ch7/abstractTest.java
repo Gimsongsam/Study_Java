@@ -2,22 +2,20 @@ package ch7;
 
 public class abstractTest {
     public static void main(String[] args) {
-        Player p = new Player() {
-            @Override
-            void play(int pos) {
+        // Player p = new Player();  --> 이렇게 사용하려면 Player 클래스가 abstract가 아니어야 한다.
 
-            }
+        Player.CDPlayer cd =  new Player.CDPlayer(); // 완성한 자손 클래스를 호출
+        cd.nextTrack();
+        System.out.println("현재 재생 번호: " + cd.currentTractk);
 
-            @Override
-            void stop() {
+        System.out.println();
 
-            }
-        };
+        cd.nextTrack();
+        System.out.println("현재 재생 번호: " + cd.currentTractk);
     }
-
 }
 
-abstract class Player{
+abstract class Player{  // 자손 클래스가 조상 클래스를 완성하도록 강조
     boolean pause;      // 일시정지 상태를 저장하기 위한 변수
     int currentPos;     // 현재 play되고 있는 위치를 저장하기 위한 변수
 
@@ -26,9 +24,12 @@ abstract class Player{
         currentPos = 0;
     }
     /** 지정된 위치(pos)에서 재생을 시작하는 기능이 수행하도록 작성되어야 한다. */
-    abstract void play(int pos);    // 추상메서드
+    // void play(int pos){};
+    abstract void play(int pos); // 추상메서드는 몸통이 없다.
+
     /** 재생을 즉시 멈추는 기능을 수행하도록 작성되어야 한다. */
-    abstract void stop();           // 추상메서드
+    //void stop(){};
+    abstract void stop(); // 추상메서드
 
     void play(){
         play(currentPos);           // 추상메서드를 사용할 수 있다.
@@ -44,7 +45,7 @@ abstract class Player{
         }
     }
 
-    class CDPlayer extends Player{
+    static class CDPlayer extends Player{
         void play(int currentPos){
             /* 조상의 추상메서드를 구현. 상세 내용 생략 */
             System.out.println("play");
