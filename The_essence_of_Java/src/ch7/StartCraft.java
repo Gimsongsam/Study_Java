@@ -4,6 +4,8 @@ abstract class Unit{
     int x, y;
     abstract void move (int x, int y);
     void stop() { /* 현재 위치에 정지 */}
+
+    int currentHP;  // 유닛의 체력
 }
 
 
