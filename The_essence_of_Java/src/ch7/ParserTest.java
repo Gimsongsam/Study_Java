@@ -1,7 +1,5 @@
 package ch7;
 
-import javax.swing.text.html.HTML;
-
 interface Parseable{
     // 구문 분석작업을 수행한다.
     public abstract void parse (String fileName);
