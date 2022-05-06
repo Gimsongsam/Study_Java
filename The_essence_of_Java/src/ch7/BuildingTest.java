@@ -13,10 +13,18 @@ interface Buildable{
 }
 
 class BuildableImpl implements Buildable{
-    public void liftOff() {/* 내용 생략 */}
-    public void move(int x, int y) {/* 내용 생략 */}
-    public void stop() {/* 내용 생략 */}
-    public void land(){/* 내용 생략 */}
+    public void liftOff() {
+        System.out.println("liftoff");
+    }
+    public void move(int x, int y) {
+        System.out.println("x: " + x + "y: " + y);
+    }
+    public void stop() {
+        System.out.println("stop");
+    }
+    public void land(){
+        System.out.println("land");
+    }
 }
 
 public class BuildingTest {
