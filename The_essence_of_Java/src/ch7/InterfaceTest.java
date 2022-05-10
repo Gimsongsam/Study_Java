@@ -1,20 +1,43 @@
 package ch7;
 
-class A {
-    public void method(B b){
-        b.methodB();
+interface I {
+    public abstract void play();
+}
+
+class A{
+    void authPlay(I i){
+        i.play();
     }
 }
 
-class B{
-    public void methodB(){
-        System.out.println("methodB()");
+class B implements I {
+    public void play(){
+        System.out.println("play in B class");
     }
 }
+
+class C implements I {
+    public void play(){
+        System.out.println("play in C class");
+    }
+}
+
+//class A {
+//    public void method(B b){
+//        b.methodB();
+//    }
+//}
+//
+//class B{
+//    public void methodB(){
+//        System.out.println("methodB()");
+//    }
+//}
 
 public class InterfaceTest {
     public static void main(String[] args) {
         A a = new A();
-        a.method(new B());
+        a.authPlay(new B()); // void authPlay(I i) 호출
+        a.authPlay(new C()); // void authPlay(I i) 호출
     }
 }
