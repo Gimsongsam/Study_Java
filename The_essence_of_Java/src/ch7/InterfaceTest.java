@@ -4,7 +4,16 @@ interface I {
     public abstract void play();
 }
 
+class InstanceManager{
+    public static I getInstance(){
+        return new B();
+    }
+}
+
 class A{
+    void methodA(){
+        I i = InstanceManager.getInstance();
+    }
     void authPlay(I i){
         i.play();
     }
