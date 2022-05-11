@@ -23,6 +23,8 @@ class B implements I {
     public void play(){
         System.out.println("play in B class");
     }
+
+    public String toString(){return "class B";}
 }
 
 class C implements I {
@@ -48,5 +50,7 @@ public class InterfaceTest {
         A a = new A();
         a.authPlay(new B()); // void authPlay(I i) 호출
         a.authPlay(new C()); // void authPlay(I i) 호출
+
+        a.methodA();
     }
 }
