@@ -2,6 +2,8 @@ package ch7;
 
 interface I {
     public abstract void play();
+    public abstract void methodB();
+    public abstract void methodC();
 }
 
 class InstanceManager{
@@ -13,6 +15,7 @@ class InstanceManager{
 class A{
     void methodA(){
         I i = InstanceManager.getInstance();
+        i.methodB();
     }
     void authPlay(I i){
         i.play();
@@ -24,6 +27,14 @@ class B implements I {
         System.out.println("play in B class");
     }
 
+    public void methodB(){
+        System.out.println("method in B class");
+    }
+
+    public void methodC(){
+        System.out.println("method in C class");
+    }
+
     public String toString(){return "class B";}
 }
 
@@ -31,6 +42,13 @@ class C implements I {
     public void play(){
         System.out.println("play in C class");
     }
+    public void methodB(){
+        System.out.println("method in B class");
+    }
+    public void methodC(){
+        System.out.println("method in C class");
+    }
+
 }
 
 //class A {
