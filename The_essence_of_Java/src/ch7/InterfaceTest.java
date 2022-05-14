@@ -7,15 +7,20 @@ interface I {
 }
 
 class InstanceManager{
-    public static I getInstance(){
+    public static I getInstanceB(){
         return new B();
+    }
+    public static I getInstanceC(){
+        return new C();
     }
 }
 
 class A{
     void methodA(){
-        I i = InstanceManager.getInstance();
-        i.methodB();
+        I b = InstanceManager.getInstanceB();
+        I c = InstanceManager.getInstanceC();
+        b.methodB();
+        c.methodC();
     }
     void authPlay(I i){
         i.play();
@@ -51,6 +56,17 @@ class C implements I {
 
 }
 
+public class InterfaceTest {
+    public static void main(String[] args) {
+        A a = new A();
+        a.authPlay(new B()); // void authPlay(I i) 호출
+        a.authPlay(new C()); // void authPlay(I i) 호출
+
+        a.methodA();
+    }
+}
+
+
 //class A {
 //    public void method(B b){
 //        b.methodB();
@@ -63,12 +79,3 @@ class C implements I {
 //    }
 //}
 
-public class InterfaceTest {
-    public static void main(String[] args) {
-        A a = new A();
-        a.authPlay(new B()); // void authPlay(I i) 호출
-        a.authPlay(new C()); // void authPlay(I i) 호출
-
-        a.methodA();
-    }
-}
