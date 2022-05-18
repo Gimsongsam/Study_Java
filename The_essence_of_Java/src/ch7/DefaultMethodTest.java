@@ -8,7 +8,7 @@ public class DefaultMethodTest {
 
 class Child2 extends Parent implements MyInterface, MyInterface2{
     public void method1(){
-
+        System.out.println("method1() in Child");   // 오버라이딩
     }
 }
 
@@ -19,7 +19,9 @@ class Parent2{
 }
 
 interface MyInterface{
-
+    default void method1(){
+        System.out.println("method1() in MyInterface");
+    }
 }
 
 interface MyInterface2{
