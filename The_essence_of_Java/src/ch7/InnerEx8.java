@@ -13,5 +13,5 @@ public class InnerEx8 {
                 }
             }// 익명 클래스의 끝
         );
-    } // main의 끝z
+    } // main의 끝
 } // InnerEx8의 끝

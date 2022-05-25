@@ -3,10 +3,11 @@ package ch7;
 import java.awt.*;
 import java.awt.event.*;
 
-//        public Button(String label) throws HeadlessException {
-//            GraphicsEnvironment.checkHeadless();
-//            this.label = label;
-//        }
+// 컴파일하면 아래의 클래스가 생성된다.
+//    InnerEx6.class
+//    InnerEx6$1.class <- 익명 클래스
+//    InnerEx6$2.class <- 익명 클래스
+//    InnerEx6$3.class <- 익명 클래스
 
 
 public class InnerEx7 {
