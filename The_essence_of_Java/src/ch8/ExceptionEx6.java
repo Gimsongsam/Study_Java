@@ -6,7 +6,7 @@ public class ExceptionEx6 {
         System.out.println(2);
         try{
             System.out.println(3);
-            System.out.println(0/0);
+            System.out.println(0/0); // 0으로 나눠서 ArithmeticException을 발생시킨다.
             System.out.println(4);
         }catch(Exception e){    // AritymeticException대신 Exception을 사용
             System.out.println(5);
