@@ -10,9 +10,6 @@ public class Member {
     public Long getId() {
         return id;
     }
-    // getter setter 만들어주는 기능..! ㅇㅇ
-    // good!!
-    // 굿굿.. 굿
 
     public void setId(Long id) {
         this.id = id;
