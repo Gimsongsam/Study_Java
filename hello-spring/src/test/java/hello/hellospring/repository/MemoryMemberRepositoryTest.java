@@ -3,14 +3,25 @@ package hello.hellospring.repository;
 import hello.hellospring.domain.Member;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
+
+// 1. TEST 클래스 -> 2. 구현 : TDD(테스트 주도개발)
+
 class MemoryMemberRepositoryTest {
-    MemberRepository repository = new MemoryMemberRepository();
+    MemoryMemberRepository repository = new MemoryMemberRepository();
+
+    // test 하나가 끝날 때 마다 공용 데이터를 클리어해야한다.
+    // 서로 의존 관계가 없이 실행이 되어야한다.
+    @AfterEach
+    public void afterEach(){
+        repository.clearStore();
+    }
 
     @Test
     public void save(){

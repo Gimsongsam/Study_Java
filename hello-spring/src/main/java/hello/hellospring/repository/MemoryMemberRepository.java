@@ -10,16 +10,16 @@ public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
-    int 변수이름[] = new int[5];
-    int[] 변수이름2 = new int[4];
-    boolean flag = false;
+//    int 변수이름[] = new int[5];
+//    int[] 변수이름2 = new int[4];
+//    boolean flag = false;
 
 //    Map store3 = new Map();
-    HashMap store4 = new HashMap();
-
-
-    Map store5 = new TreeMap();
-    Map store2 = new HashMap();
+//    HashMap store4 = new HashMap();
+//
+//
+//    Map store5 = new TreeMap();
+//    Map store2 = new HashMap();
 
     @Override
     public Member save(Member member) {
@@ -46,5 +46,10 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
+    }
+
+    // 스토리지를 비운다.
+    public void clearStore(){
+        store.clear();
     }
 }
