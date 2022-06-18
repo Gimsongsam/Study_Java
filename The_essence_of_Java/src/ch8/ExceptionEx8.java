@@ -10,7 +10,8 @@ public class ExceptionEx8 {
             System.out.println(4);
         } catch (ArithmeticException ae){
             ae.printStackTrace();
-
-        }
-    }
+            System.out.println("예외메시지: " + ae.getMessage());
+        } // try-catch의 끝
+        System.out.println(6);
+    }   // main 메서드의 끝
 }
