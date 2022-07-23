@@ -1,6 +1,6 @@
 package ch8;
 
-public class Exception13 {
+public class ExceptionEx13 {
     public static void main(String[] args) {
         method1();
     } // main 메서드의 끝
