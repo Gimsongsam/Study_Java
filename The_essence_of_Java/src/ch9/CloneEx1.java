@@ -1,6 +1,8 @@
 package ch9;
 
 class Point implements Cloneable{
+    // Clone인터페이스를 구현한 클래스에서만 clone()을 호출할 수 있다.
+    // 이 인터페이스를 구현하지 않고 clone()을 호출하면 예외가 발생한다.
     int x, y;
 
     Point(int x, int y){
