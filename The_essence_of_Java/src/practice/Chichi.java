@@ -1,3 +1,5 @@
+package practice;
+
 public class Chichi {
     // main method
     public static void main(String[] args){
