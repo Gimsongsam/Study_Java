@@ -26,5 +26,17 @@ public class Clone {
         // 따라서 완전한 복제라고 볼 수 없다.
         Circle c1 = new Circle(new Point(1, 1), 2.0);
         Circle c2 = c1.clone(); // 얕은 복사
+
+//        c2.p = new Point(2, 5);
+//        c2.r = 5.5;
+
+        c1.p = new Point(2, 5);
+        c1.r = 5.5;
+
+        System.out.println(c1);
+        System.out.println(c2);
+
+        System.out.println("원점: " + c1.p + " 반지름: " + c1.r);
+        System.out.println("원점: " + c2.p + " 반지름: " + c2.r);
     }
 }
