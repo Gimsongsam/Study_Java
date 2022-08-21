@@ -1,32 +1,31 @@
 package ch9;
 
-class Circle implements Cloneable{
-    Point p; // 원점
+class Circle2 implements Cloneable{
+    Point2 p; // 원점
     double r; // 반지름
 
-    Circle(Point p, double r){
+    Circle2(Point2 p, double r){
         this.p = p;
         this.r = r;
     }
-
-    public Circle shallowCopy(){ // 얕은 복사
+    public Circle2 shallowCopy(){ // 얕은 복사
         Object obj = null;
 
         try{
             obj = super.clone();
         } catch (CloneNotSupportedException e){}
 
-        return (Circle) obj;
+        return (Circle2) obj;
     }
 
-    public Circle deepCopy(){ // 깊은 복사
+    public Circle2 deepCopy(){ // 깊은 복사
         Object obj = null;
         try{
             obj = super.clone();
         } catch (CloneNotSupportedException e){}
 
-        Circle c = (Circle)obj;
-        c.p = new Point(this.p.x, this.p.y);
+        Circle2 c = (Circle2)obj;
+        c.p = new Point2(this.p.x, this.p.y);
 
         return c;
     }
@@ -34,26 +33,38 @@ class Circle implements Cloneable{
     public String toString(){
         return "[p=" + p + ", r=" + r +"]";
     }
+}
 
-    class Point{
-        int x, y;
+class Point2{
+    int x, y;
 
-        Point(int x, int y){
-            this.x = x;
-            this.y = y;
-        }
+    Point2(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
 
-        public String toString(){
-            return "{"+ x +", " + y + ")";
-        }
+    public String toString(){
+        return "{"+ x +", " + y + ")";
     }
 }
 
 public class ShallowDeepCopy {
     public static void main(String[] args) {
-        Circle c1 = new Circle(new Point(1, 1), 2.0);
-        Circle c2 = c1.clone();
+        Circle2 c1 = new Circle2(new Point2(1, 1), 2.0);
+        Circle2 c2 = c1.shallowCopy();
+        Circle2 c3 = c1.deepCopy();
 
+        System.out.println("c1= " + c1);
+        System.out.println("c2= " + c2);
+        System.out.println("c3= " + c3);
+
+        c1.p.x = 9;
+        c1.p.y = 9;
+
+        System.out.println("= c1의 변경 후 =");
+        System.out.println("c1= " + c1);
+        System.out.println("c2= " + c2);
+        System.out.println("c3= " + c3);
 
     }
 }
