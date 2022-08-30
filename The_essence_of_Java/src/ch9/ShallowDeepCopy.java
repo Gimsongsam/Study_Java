@@ -51,8 +51,8 @@ class Circle implements Cloneable{
 
 public class ShallowDeepCopy {
     public static void main(String[] args) {
-        Circle c1 = new Circle(new Point(1, 1), 2.0);
-        Circle c2 = c1.clone();
+//        Circle c1 = new Circle(new Point(1, 1), 2.0);
+//        Circle c2 = c1.clone();
 
 
     }
