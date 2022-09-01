@@ -34,10 +34,11 @@ public class Clone {
         System.out.println("원점: " + c1.p + " 반지름: " + c1.r);
         System.out.println("원점: " + c2.p + " 반지름: " + c2.r);
 
-        System.out.println("변경 후");
+        System.out.println("c1 변경 후");
 
-        c2.p = new Point(2, 5);
-        c2.r = 5.5;
+        c1.p.x = 6;
+        c1.p.y = 6;
+        c1.r = 5.5;
 
         System.out.println("원점: " + c1.p + " 반지름: " + c1.r);
         System.out.println("원점: " + c2.p + " 반지름: " + c2.r);
@@ -48,7 +49,7 @@ public class Clone {
         System.out.println("arr" + Arrays.toString(arr));
         System.out.println("arrClone" + Arrays.toString(arrClone));
 
-        arrClone[2] = 9;
+        arr[2] = 9;
 
         System.out.println("변경 후");
         System.out.println("arr" + Arrays.toString(arr));
