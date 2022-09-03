@@ -12,6 +12,7 @@ package ch9;
 // 그러나 문자열 리터럴은 이미 존재하는 것을 재사용하는 것이다.
 public class StringEx1 {
     public static void main(String[] args) {
+        // 문자열 리터럴을 지정하는 방법
         String str1 = "abc";
         String str2 = "abc";
         System.out.println("String str1 = \"abc\";");
@@ -21,7 +22,7 @@ public class StringEx1 {
         System.out.println("str1.equals(str2) ? " + str1.equals(str2)); // true
         System.out.println();
 
-
+        // String 클래스의 생성자를 사용해서 만드는 방법
         String str3 = new String("\"abc\"");
         String str4 = new String("\"abc\"");
         System.out.println("String str1 = \"abc\";");
