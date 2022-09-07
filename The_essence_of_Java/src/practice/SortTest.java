@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class SortTest {
     public static void main(String[] args) {
 
-        int[] arr = {6, 2, 7, 4, 8, 9, 1};
+        int[] arr = {6, 2, 7, 4, 8, 9, 1, 5, 3, 0};
 
         for(int i=arr.length; i>0; i--){
 
@@ -22,12 +22,11 @@ public class SortTest {
                     continue;
                 }
 
-                int temp = 0;
                 // 이전 원소와 현재 원소의 값을 비교한다.
                 // 이전 원소의 값이 현재 원소의 값보다 크다면 교환한다.
                 if(arr[j-1] > arr[j]){
                     // temp에 현재 값을 넣어놓는다.
-                    temp = j;
+                    int temp = arr[j];
 
                     // 이전값을 현재있던 인덱스에 넣어놓는다.
                     arr[j] = arr[j-1];
@@ -40,5 +39,4 @@ public class SortTest {
             }
         }
     }
-
 }
