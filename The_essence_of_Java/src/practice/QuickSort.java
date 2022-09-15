@@ -1,30 +1,38 @@
 package practice;
 
+import java.util.Arrays;
+
 public class QuickSort {
-    public static void main(String[] args) {
-        int[] arr = {5,2,7,4,0,9,3};
+    public int[] partition(int[] arr, int low, int hight){
+        int l_pivot = arr[0];
+        int r_pivot = arr[arr.length-1];
 
-//        System.out.println(arr.);
+        // low 탐색
+        for(int i=0; i<arr.length-1; i++){
 
-//        LowSearch(arr);
+            int temp = l_pivot;
+
+            // low가 비교값보다 작다면 멈추기
+            if(arr[i] < arr[i+1]){
+                // index 값을 저장
+                l_pivot = i;
+                break;
+            }
+            // 그렇지 않다면 자리 교환하기
+            else{
+                temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+            System.out.println(Arrays.toString(arr));
+        }
+        System.out.println(l_pivot);
+
+        return arr;
     }
 
-    // low를 탐색한다
-    public static void LowSearch(int[] arr){
-
-        // 배열의 첫번째 인덱스를 pivot으로 뽑는다.
-        int l_pivot = arr[0];
-
-        // 탐색시작
-        for(int i=0; i<arr.length; i++){
-            //비교할 숫자가 없으면 탐색 중지
-            if(i==arr.length){
-
-            }
-
-            // pivot보다 큰 숫자를 만나면 탐색중지
-
-        }
-
+    public int[] sort(int[] arr){
+        arr = partition(arr, 0, arr.length - 1);
+        return arr;
     }
 }
